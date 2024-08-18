@@ -106,7 +106,7 @@ public class PrincipalSrv extends javax.swing.JFrame {
                     final int progress = i;
                     SwingUtilities.invokeLater(() -> {
                         progressBar.setValue(progress);
-                        progressLabel.setText("Conectando... " + progress + "%");
+                        progressLabel.setText("Conectando " + progress + "%");
                     });
                     try {
                         TimeUnit.MILLISECONDS.sleep(200); // Espera para simular el progreso
@@ -134,7 +134,7 @@ public class PrincipalSrv extends javax.swing.JFrame {
             }
         }).start();
     }
-
+    //se crea un socket por cada usuario registrado
     private class ClienteHilo implements Runnable {
         private Socket socket;
         private BufferedReader in;
@@ -172,13 +172,13 @@ public class PrincipalSrv extends javax.swing.JFrame {
                 }
             }
         }
-
+         //se agregan los usuarios que se conectan con el servidor 
         private void agregarUsuario(String userName) {
             SwingUtilities.invokeLater(() -> {
                 userListModel.addElement(userName);
             });
         }
-
+        //se eliminan los usuarios que se desconectan con el servidor
         private void eliminarUsuario(String userName) {
             SwingUtilities.invokeLater(() -> {
                 userListModel.removeElement(userName);
