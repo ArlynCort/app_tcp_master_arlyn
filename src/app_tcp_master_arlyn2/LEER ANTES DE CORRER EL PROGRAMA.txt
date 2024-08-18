@@ -1,0 +1,6 @@
+1. RECOMENDACIONES
+- se debe primero iniciar el server, la clase llamada
+PrincipalServer
+- luego se debe lanzar el programa registroCli para que
+deje ingresar el nombre del cliente para permitir mandar
+el mensaje
