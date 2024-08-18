@@ -40,7 +40,8 @@ public class registroCli extends JFrame {
         nombreTxt.setFont(new Font("Verdana", 0, 14));
         nombreTxt.setBounds(40, 70, 200, 30);
         this.getContentPane().add(nombreTxt);
-
+        
+        //ajustes del botón para conectarse con el servidor
         bConectar = new JButton("CONECTAR CON SERVIDOR");
         bConectar.setFont(new Font("Segoe UI", 0, 14));
         bConectar.setBounds(40, 110, 200, 40);
@@ -51,14 +52,14 @@ public class registroCli extends JFrame {
         });
         this.getContentPane().add(bConectar);
     }
-
+        //Solicita el nombre del usuario 
     private void conectarActionPerformed(ActionEvent evt) {
         String nombreUsuario = nombreTxt.getText().trim();
         if (nombreUsuario.isEmpty()) {
             JOptionPane.showMessageDialog(this, "Ingrese un nombre.");
             return;
         }
-        // Aquí puedes intentar conectar al servidor, si la conexión es exitosa:
+        //al momento de ingresar el nombre se conecta al servidor y muestra la ventana de PrincipalCli 
         this.setVisible(false);
         new PrincipalCli(nombreUsuario).setVisible(true);
         this.dispose(); // Cierra la ventana de conexión
