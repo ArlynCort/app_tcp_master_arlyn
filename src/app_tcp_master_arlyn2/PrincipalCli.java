@@ -100,7 +100,7 @@ public class PrincipalCli extends javax.swing.JFrame {
                 try {
                     String fromServer;
                     while ((fromServer = in.readLine()) != null) {
-                        // Suponiendo que el servidor envía el mensaje en el formato "nombreUsuario: mensaje"
+                      //se coloca el nombre de quien envia el mensaje
                         if (!fromServer.startsWith(nombreUsuario + ":")) {
                             mensajesTxt.append(fromServer + "\n");
                         }
