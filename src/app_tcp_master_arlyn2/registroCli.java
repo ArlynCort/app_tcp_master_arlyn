@@ -24,11 +24,11 @@ public class registroCli extends JFrame {
         this.getContentPane().setLayout(null);
 
         
-        ImageIcon originalIcon = new ImageIcon(getClass().getResource("cliente.png")); // Asegúrate de que la imagen esté en la misma carpeta que este archivo .java
-        Image scaledImage = originalIcon.getImage().getScaledInstance(80, 80, Image.SCALE_SMOOTH); // Redimensionar a 100x100 píxeles
+        ImageIcon originalIcon = new ImageIcon(getClass().getResource("cliente.png")); 
+        Image scaledImage = originalIcon.getImage().getScaledInstance(80, 80, Image.SCALE_SMOOTH); 
         ImageIcon scaledIcon = new ImageIcon(scaledImage);
         JLabel imageLabel = new JLabel(scaledIcon);
-        imageLabel.setBounds(270, 40, scaledIcon.getIconWidth(), scaledIcon.getIconHeight()); // Ajusta el tamaño y posición
+        imageLabel.setBounds(270, 40, scaledIcon.getIconWidth(), scaledIcon.getIconHeight()); 
         this.getContentPane().add(imageLabel);
 
         JLabel jLabelNombre = new JLabel("Ingrese su nombre:");
