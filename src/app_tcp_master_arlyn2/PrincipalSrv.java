@@ -101,7 +101,7 @@ public class PrincipalSrv extends javax.swing.JFrame {
                 serverSocket = new ServerSocket(PORT);
                 mensajesTxt.append("Servidor TCP en ejecución: " + addr + " ,Puerto " + serverSocket.getLocalPort() + "\n");
 
-                // Simulación de progreso (puedes ajustar el tiempo de espera)
+                // Simulación de progreso 
                 for (int i = 0; i <= 100; i += 10) {
                     final int progress = i;
                     SwingUtilities.invokeLater(() -> {
